@@ -10,17 +10,16 @@ namespace miprimerproyecto
     {
         static void Main(string[] args)
         {
-            Boolean comprobar = true;
-            Console.WriteLine("el valor es {0}", comprobar);
+            Console.WriteLine("Num1: ");
+            double num1 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("nombre: ");
-            string nombre = Console.ReadLine();
-                Console.WriteLine("hola {0} bienvenido", nombre);
+            Console.WriteLine("Num2: ");
 
-            Console.ReadLine();
+            double num2 = double.Parse(Console.ReadLine());
 
-            DateTime fechaActual = new DateTime();
-            Console.WriteLine("la fecha actual es {0} ", fechaActual);
+         double respuesta = num1 + num2;
+            Console.WriteLine("La respuesta de la suma es, {2}", num1, num2, respuesta);
+
             Console.ReadLine();
 
         }
