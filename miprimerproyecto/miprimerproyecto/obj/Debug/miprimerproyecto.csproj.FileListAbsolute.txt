@@ -1,0 +1,7 @@
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\bin\Debug\miprimerproyecto.exe.config
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\bin\Debug\miprimerproyecto.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\bin\Debug\miprimerproyecto.pdb
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\obj\Debug\miprimerproyecto.csproj.AssemblyReference.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\obj\Debug\miprimerproyecto.csproj.CoreCompileInputs.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\obj\Debug\miprimerproyecto.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\miprimerproyecto\miprimerproyecto\obj\Debug\miprimerproyecto.pdb
