@@ -1,0 +1,7 @@
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\bin\Debug\computoylaboratorio.exe.config
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\bin\Debug\computoylaboratorio.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\bin\Debug\computoylaboratorio.pdb
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\obj\Debug\computoylaboratorio.csproj.AssemblyReference.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\obj\Debug\computoylaboratorio.csproj.CoreCompileInputs.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\obj\Debug\computoylaboratorio.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\computoylaboratorio\computoylaboratorio\obj\Debug\computoylaboratorio.pdb
