@@ -1,0 +1,7 @@
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\bin\Debug\prograarimertrico.exe.config
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\bin\Debug\prograarimertrico.exe
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\bin\Debug\prograarimertrico.pdb
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\obj\Debug\prograarimertrico.csproj.AssemblyReference.cache
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\obj\Debug\prograarimertrico.csproj.CoreCompileInputs.cache
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\obj\Debug\prograarimertrico.exe
+D:\Users\Estudiante\Desktop\Progra1_2024-semi\prograarimertrico\obj\Debug\prograarimertrico.pdb
