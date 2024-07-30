@@ -10,47 +10,26 @@ namespace computoylaboratorio
     {
         static void Main(string[] args)
         {
-            Console.Write("Lab1: ");
-            double lab1 = double.Parse(Console.ReadLine()); //8
-            Console.Write("Lab2: ");
-            double lab2 = double.Parse(Console.ReadLine()); //9
-            Console.Write("Parcial 1: ");
-            double parcial1 = double.Parse(Console.ReadLine()); //7
-                                                                // 8*30%= 2.4
-                                                                // 9*30%= 2.7
-                                                                // 7*40%= 2.8
-                                                                //C1    = 7.9
-            double c1 = lab1 * 30 / 100 + lab2 * 30 / 100 + parcial1 * 40 / 100;
-            Console.WriteLine("La nota de C1 es: {0}", c1);
+            int[] serie = new int[] { 5, 4, 6, 8, 9 };
+            int suma = 0;
+            foreach (int num in serie)
 
-            Console.Write("Lab1: ");
-            lab1 = double.Parse(Console.ReadLine()); 
-            Console.Write("Lab2: ");
-            lab2 = double.Parse(Console.ReadLine()); 
-            Console.Write("Parcial 1: ");
-            parcial1 = double.Parse(Console.ReadLine()); 
-            double c2 = lab1 * 30 / 100 + lab2 * 30 / 100 + parcial1 * 40 / 100;
-            Console.WriteLine("La nota de C2 es: {0}", c2);
+                suma += num;
+            Console.Write("Edad: ");
+            int edad = int.Parse(Console.ReadLine());
+
+            if (edad >= 18)
+
+                Console.WriteLine("Bienvenido al mundo de las reposabilidades.");
+
+            if (edad < 18)
+
+                Console.WriteLine("Eres un adolescente, disfruta de la vida.");
 
 
-            Console.Write("Lab1: ");
-            lab1 = double.Parse(Console.ReadLine()); 
-            Console.Write("Lab2: ");
-            lab2 = double.Parse(Console.ReadLine()); 
-            Console.Write("Parcial 1: ");
-            parcial1 = double.Parse(Console.ReadLine()); 
-            double c3 = lab1 * 30 / 100 + lab2 * 30 / 100 + parcial1 * 40 / 100;
-            Console.WriteLine("La nota de C3 es: {0}", c3);
+            decimal prom = suma / serie.Length;
+            Console.WriteLine("La suma es: {0}, el promedio {1}", suma, prom);
 
-
-            Console.Write("c1, c2, c3 ");
-            double suma = c1 + c2 + c3;
-            double promedio = suma / 3;
-            Console.WriteLine("la suma de las notas es: {0}", suma);
-            Console.WriteLine("el promedio de las notas es: {0}", promedio);
-
-
-            //Pausa.
             Console.ReadLine();
         }
     }

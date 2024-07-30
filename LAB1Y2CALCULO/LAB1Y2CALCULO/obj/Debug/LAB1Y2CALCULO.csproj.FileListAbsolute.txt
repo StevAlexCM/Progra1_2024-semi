@@ -1,0 +1,2 @@
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\LAB1Y2CALCULO\LAB1Y2CALCULO\obj\Debug\LAB1Y2CALCULO.csproj.AssemblyReference.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\LAB1Y2CALCULO\LAB1Y2CALCULO\obj\Debug\LAB1Y2CALCULO.csproj.CoreCompileInputs.cache

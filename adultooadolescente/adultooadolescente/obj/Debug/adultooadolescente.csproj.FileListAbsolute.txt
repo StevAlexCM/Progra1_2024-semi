@@ -1,0 +1,7 @@
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\bin\Debug\adultooadolescente.exe.config
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\bin\Debug\adultooadolescente.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\bin\Debug\adultooadolescente.pdb
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\obj\Debug\adultooadolescente.csproj.AssemblyReference.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\obj\Debug\adultooadolescente.csproj.CoreCompileInputs.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\obj\Debug\adultooadolescente.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\adultooadolescente\adultooadolescente\obj\Debug\adultooadolescente.pdb

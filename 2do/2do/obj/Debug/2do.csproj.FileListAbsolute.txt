@@ -1,0 +1,7 @@
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\bin\Debug\2do.exe.config
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\bin\Debug\2do.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\bin\Debug\2do.pdb
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\obj\Debug\2do.csproj.AssemblyReference.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\obj\Debug\2do.csproj.CoreCompileInputs.cache
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\obj\Debug\2do.exe
+C:\Users\campo\OneDrive\Escritorio\Visual\REPOSITORIO\2do\2do\obj\Debug\2do.pdb

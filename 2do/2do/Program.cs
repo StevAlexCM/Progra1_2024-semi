@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace miprimerproyecto
+namespace _2do
 {
     class Program
     {
@@ -22,7 +22,7 @@ namespace miprimerproyecto
 
                 Console.WriteLine("Bienvenido al mundo de las reposabilidades.");
 
-            if (edad < 18 )
+            if (edad < 18)
 
                 Console.WriteLine("Eres un adolescente, disfruta de la vida.");
 
@@ -31,7 +31,6 @@ namespace miprimerproyecto
             Console.WriteLine("La suma es: {0}, el promedio {1}", suma, prom);
 
             Console.ReadLine();
-
         }
     }
 }
