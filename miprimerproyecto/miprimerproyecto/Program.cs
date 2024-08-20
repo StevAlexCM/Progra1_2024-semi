@@ -10,15 +10,46 @@ namespace miprimerproyecto
     {
         static void Main(string[] args)
         {
+            Console.Write("Ingrese la serie de numeros separados por comas: ");
+            String serie = Console.ReadLine();
+            String[] numeros = serie.Split(',');
 
-            Console.WriteLine("La suma de 10+5={0}", suma());
+            Console.WriteLine("La media aritmetica es: {0}, y la desviacion tipica es: {1}, la media armonica es: {2}", media(numeros), tipica(numeros), armonica(numeros));
 
             Console.ReadLine();
         }
-        static int suma()
+        static double media(string[] serie)
         {
-            int respuesta = 10 + 5;
-            return respuesta;
+            double media = 0;
+            foreach (string num in serie)
+            {
+                media += int.Parse(num);
+            }
+            return media / serie.Length;
+        }
+        static double tipica(string[] serie)
+        {
+            double tipica = 0,
+                    m = media(serie);
+            foreach (string num in serie)
+            {
+                tipica += Math.Pow(int.Parse(num) - m, 2);
+            }
+            tipica = Math.Sqrt(tipica / serie.Length);
+            return Math.Round(tipica, 2);
+            }
+        static double armonica(string[] serie)
+        {
+            double sumaReciproca = 0;
+            foreach (string num in serie)
+            {
+                sumaReciproca += 1.0 / int.Parse(num);
+            }
+            return serie.Length / sumaReciproca;
         }
     }
 }
+
+
+
+
