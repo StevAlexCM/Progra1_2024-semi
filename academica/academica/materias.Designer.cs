@@ -32,6 +32,10 @@ namespace academica
             this.lblBuscarMaterias = new System.Windows.Forms.Label();
             this.txtBuscarMaterias = new System.Windows.Forms.TextBox();
             this.grdDatosMaterias = new System.Windows.Forms.DataGridView();
+            this.idMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbEdicionMaterias = new System.Windows.Forms.GroupBox();
             this.btnEliminarMaterias = new System.Windows.Forms.Button();
             this.btnModificarMaterias = new System.Windows.Forms.Button();
@@ -49,10 +53,6 @@ namespace academica
             this.txtNombreMaterias = new System.Windows.Forms.TextBox();
             this.lblCodigoMaterias = new System.Windows.Forms.Label();
             this.txtCodigoMaterias = new System.Windows.Forms.TextBox();
-            this.idMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosMaterias)).BeginInit();
             this.grbEdicionMaterias.SuspendLayout();
             this.grbNavegacionMaterias.SuspendLayout();
@@ -63,18 +63,21 @@ namespace academica
             // 
             this.lblBuscarMaterias.AutoSize = true;
             this.lblBuscarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarMaterias.Location = new System.Drawing.Point(416, 19);
+            this.lblBuscarMaterias.Location = new System.Drawing.Point(554, 23);
+            this.lblBuscarMaterias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscarMaterias.Name = "lblBuscarMaterias";
-            this.lblBuscarMaterias.Size = new System.Drawing.Size(91, 24);
+            this.lblBuscarMaterias.Size = new System.Drawing.Size(117, 29);
             this.lblBuscarMaterias.TabIndex = 15;
             this.lblBuscarMaterias.Text = "BUSCAR:";
             // 
             // txtBuscarMaterias
             // 
-            this.txtBuscarMaterias.Location = new System.Drawing.Point(507, 24);
+            this.txtBuscarMaterias.Location = new System.Drawing.Point(676, 29);
+            this.txtBuscarMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarMaterias.Name = "txtBuscarMaterias";
-            this.txtBuscarMaterias.Size = new System.Drawing.Size(347, 20);
+            this.txtBuscarMaterias.Size = new System.Drawing.Size(462, 22);
             this.txtBuscarMaterias.TabIndex = 16;
+            this.txtBuscarMaterias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarMaterias_KeyUp);
             // 
             // grdDatosMaterias
             // 
@@ -86,20 +89,61 @@ namespace academica
             this.codigo,
             this.nombre,
             this.uv});
-            this.grdDatosMaterias.Location = new System.Drawing.Point(420, 50);
+            this.grdDatosMaterias.Location = new System.Drawing.Point(560, 61);
+            this.grdDatosMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdDatosMaterias.Name = "grdDatosMaterias";
             this.grdDatosMaterias.ReadOnly = true;
-            this.grdDatosMaterias.Size = new System.Drawing.Size(434, 252);
+            this.grdDatosMaterias.RowHeadersWidth = 51;
+            this.grdDatosMaterias.Size = new System.Drawing.Size(578, 310);
             this.grdDatosMaterias.TabIndex = 14;
+            // 
+            // idMateria
+            // 
+            this.idMateria.DataPropertyName = "idMateria";
+            this.idMateria.HeaderText = "ID";
+            this.idMateria.MinimumWidth = 6;
+            this.idMateria.Name = "idMateria";
+            this.idMateria.ReadOnly = true;
+            this.idMateria.Visible = false;
+            this.idMateria.Width = 125;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "CODIGO";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "NOMBRE";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 125;
+            // 
+            // uv
+            // 
+            this.uv.DataPropertyName = "uv";
+            this.uv.HeaderText = "UV";
+            this.uv.MinimumWidth = 6;
+            this.uv.Name = "uv";
+            this.uv.ReadOnly = true;
+            this.uv.Width = 125;
             // 
             // grbEdicionMaterias
             // 
             this.grbEdicionMaterias.Controls.Add(this.btnEliminarMaterias);
             this.grbEdicionMaterias.Controls.Add(this.btnModificarMaterias);
             this.grbEdicionMaterias.Controls.Add(this.btnNuevoMaterias);
-            this.grbEdicionMaterias.Location = new System.Drawing.Point(231, 308);
+            this.grbEdicionMaterias.Location = new System.Drawing.Point(308, 379);
+            this.grbEdicionMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbEdicionMaterias.Name = "grbEdicionMaterias";
-            this.grbEdicionMaterias.Size = new System.Drawing.Size(294, 58);
+            this.grbEdicionMaterias.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbEdicionMaterias.Size = new System.Drawing.Size(392, 71);
             this.grbEdicionMaterias.TabIndex = 13;
             this.grbEdicionMaterias.TabStop = false;
             this.grbEdicionMaterias.Text = "Navegacion";
@@ -107,9 +151,10 @@ namespace academica
             // btnEliminarMaterias
             // 
             this.btnEliminarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMaterias.Location = new System.Drawing.Point(189, 19);
+            this.btnEliminarMaterias.Location = new System.Drawing.Point(252, 23);
+            this.btnEliminarMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarMaterias.Name = "btnEliminarMaterias";
-            this.btnEliminarMaterias.Size = new System.Drawing.Size(97, 38);
+            this.btnEliminarMaterias.Size = new System.Drawing.Size(130, 47);
             this.btnEliminarMaterias.TabIndex = 6;
             this.btnEliminarMaterias.Text = "Eliminar";
             this.btnEliminarMaterias.UseVisualStyleBackColor = true;
@@ -118,9 +163,10 @@ namespace academica
             // btnModificarMaterias
             // 
             this.btnModificarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarMaterias.Location = new System.Drawing.Point(87, 19);
+            this.btnModificarMaterias.Location = new System.Drawing.Point(116, 23);
+            this.btnModificarMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarMaterias.Name = "btnModificarMaterias";
-            this.btnModificarMaterias.Size = new System.Drawing.Size(104, 38);
+            this.btnModificarMaterias.Size = new System.Drawing.Size(138, 47);
             this.btnModificarMaterias.TabIndex = 5;
             this.btnModificarMaterias.Text = "Modificar";
             this.btnModificarMaterias.UseVisualStyleBackColor = true;
@@ -129,9 +175,10 @@ namespace academica
             // btnNuevoMaterias
             // 
             this.btnNuevoMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoMaterias.Location = new System.Drawing.Point(6, 19);
+            this.btnNuevoMaterias.Location = new System.Drawing.Point(8, 23);
+            this.btnNuevoMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevoMaterias.Name = "btnNuevoMaterias";
-            this.btnNuevoMaterias.Size = new System.Drawing.Size(83, 38);
+            this.btnNuevoMaterias.Size = new System.Drawing.Size(110, 47);
             this.btnNuevoMaterias.TabIndex = 4;
             this.btnNuevoMaterias.Text = "Nuevo";
             this.btnNuevoMaterias.UseVisualStyleBackColor = true;
@@ -144,9 +191,11 @@ namespace academica
             this.grbNavegacionMaterias.Controls.Add(this.btnSiguienteMaterias);
             this.grbNavegacionMaterias.Controls.Add(this.btnAnteriorMaterias);
             this.grbNavegacionMaterias.Controls.Add(this.btnPrimeroMaterias);
-            this.grbNavegacionMaterias.Location = new System.Drawing.Point(12, 308);
+            this.grbNavegacionMaterias.Location = new System.Drawing.Point(16, 379);
+            this.grbNavegacionMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbNavegacionMaterias.Name = "grbNavegacionMaterias";
-            this.grbNavegacionMaterias.Size = new System.Drawing.Size(213, 58);
+            this.grbNavegacionMaterias.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbNavegacionMaterias.Size = new System.Drawing.Size(284, 71);
             this.grbNavegacionMaterias.TabIndex = 12;
             this.grbNavegacionMaterias.TabStop = false;
             this.grbNavegacionMaterias.Text = "Navegacion";
@@ -155,18 +204,20 @@ namespace academica
             // 
             this.lblRegistrosMaterias.AutoSize = true;
             this.lblRegistrosMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrosMaterias.Location = new System.Drawing.Point(76, 24);
+            this.lblRegistrosMaterias.Location = new System.Drawing.Point(102, 29);
+            this.lblRegistrosMaterias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrosMaterias.Name = "lblRegistrosMaterias";
-            this.lblRegistrosMaterias.Size = new System.Drawing.Size(63, 24);
+            this.lblRegistrosMaterias.Size = new System.Drawing.Size(77, 29);
             this.lblRegistrosMaterias.TabIndex = 10;
             this.lblRegistrosMaterias.Text = "x de n";
             // 
             // btnUltimoMaterias
             // 
             this.btnUltimoMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUltimoMaterias.Location = new System.Drawing.Point(172, 14);
+            this.btnUltimoMaterias.Location = new System.Drawing.Point(230, 17);
+            this.btnUltimoMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUltimoMaterias.Name = "btnUltimoMaterias";
-            this.btnUltimoMaterias.Size = new System.Drawing.Size(35, 38);
+            this.btnUltimoMaterias.Size = new System.Drawing.Size(46, 47);
             this.btnUltimoMaterias.TabIndex = 3;
             this.btnUltimoMaterias.Text = ">|";
             this.btnUltimoMaterias.UseVisualStyleBackColor = true;
@@ -175,9 +226,10 @@ namespace academica
             // btnSiguienteMaterias
             // 
             this.btnSiguienteMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteMaterias.Location = new System.Drawing.Point(139, 14);
+            this.btnSiguienteMaterias.Location = new System.Drawing.Point(186, 17);
+            this.btnSiguienteMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSiguienteMaterias.Name = "btnSiguienteMaterias";
-            this.btnSiguienteMaterias.Size = new System.Drawing.Size(35, 38);
+            this.btnSiguienteMaterias.Size = new System.Drawing.Size(46, 47);
             this.btnSiguienteMaterias.TabIndex = 2;
             this.btnSiguienteMaterias.Text = ">";
             this.btnSiguienteMaterias.UseVisualStyleBackColor = true;
@@ -186,9 +238,10 @@ namespace academica
             // btnAnteriorMaterias
             // 
             this.btnAnteriorMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnteriorMaterias.Location = new System.Drawing.Point(40, 18);
+            this.btnAnteriorMaterias.Location = new System.Drawing.Point(54, 22);
+            this.btnAnteriorMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnteriorMaterias.Name = "btnAnteriorMaterias";
-            this.btnAnteriorMaterias.Size = new System.Drawing.Size(35, 38);
+            this.btnAnteriorMaterias.Size = new System.Drawing.Size(46, 47);
             this.btnAnteriorMaterias.TabIndex = 1;
             this.btnAnteriorMaterias.Text = "<";
             this.btnAnteriorMaterias.UseVisualStyleBackColor = true;
@@ -197,9 +250,10 @@ namespace academica
             // btnPrimeroMaterias
             // 
             this.btnPrimeroMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrimeroMaterias.Location = new System.Drawing.Point(7, 18);
+            this.btnPrimeroMaterias.Location = new System.Drawing.Point(10, 22);
+            this.btnPrimeroMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrimeroMaterias.Name = "btnPrimeroMaterias";
-            this.btnPrimeroMaterias.Size = new System.Drawing.Size(35, 38);
+            this.btnPrimeroMaterias.Size = new System.Drawing.Size(46, 47);
             this.btnPrimeroMaterias.TabIndex = 0;
             this.btnPrimeroMaterias.Text = "|<";
             this.btnPrimeroMaterias.UseVisualStyleBackColor = true;
@@ -214,9 +268,11 @@ namespace academica
             this.grbDatosMaterias.Controls.Add(this.lblCodigoMaterias);
             this.grbDatosMaterias.Controls.Add(this.txtCodigoMaterias);
             this.grbDatosMaterias.Enabled = false;
-            this.grbDatosMaterias.Location = new System.Drawing.Point(11, 9);
+            this.grbDatosMaterias.Location = new System.Drawing.Point(14, 11);
+            this.grbDatosMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbDatosMaterias.Name = "grbDatosMaterias";
-            this.grbDatosMaterias.Size = new System.Drawing.Size(390, 293);
+            this.grbDatosMaterias.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbDatosMaterias.Size = new System.Drawing.Size(520, 361);
             this.grbDatosMaterias.TabIndex = 11;
             this.grbDatosMaterias.TabStop = false;
             this.grbDatosMaterias.Text = "Datos Materias";
@@ -225,93 +281,71 @@ namespace academica
             // 
             this.lblUvMaterias.AutoSize = true;
             this.lblUvMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUvMaterias.Location = new System.Drawing.Point(31, 116);
+            this.lblUvMaterias.Location = new System.Drawing.Point(42, 143);
+            this.lblUvMaterias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUvMaterias.Name = "lblUvMaterias";
-            this.lblUvMaterias.Size = new System.Drawing.Size(41, 24);
+            this.lblUvMaterias.Size = new System.Drawing.Size(51, 29);
             this.lblUvMaterias.TabIndex = 5;
             this.lblUvMaterias.Text = "UV:";
             // 
             // txtUvMaterias
             // 
-            this.txtUvMaterias.Location = new System.Drawing.Point(131, 120);
+            this.txtUvMaterias.Location = new System.Drawing.Point(174, 148);
+            this.txtUvMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUvMaterias.Name = "txtUvMaterias";
-            this.txtUvMaterias.Size = new System.Drawing.Size(63, 20);
+            this.txtUvMaterias.Size = new System.Drawing.Size(82, 22);
             this.txtUvMaterias.TabIndex = 4;
             // 
             // lblNombreMaterias
             // 
             this.lblNombreMaterias.AutoSize = true;
             this.lblNombreMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMaterias.Location = new System.Drawing.Point(31, 76);
+            this.lblNombreMaterias.Location = new System.Drawing.Point(42, 93);
+            this.lblNombreMaterias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreMaterias.Name = "lblNombreMaterias";
-            this.lblNombreMaterias.Size = new System.Drawing.Size(84, 24);
+            this.lblNombreMaterias.Size = new System.Drawing.Size(107, 29);
             this.lblNombreMaterias.TabIndex = 3;
             this.lblNombreMaterias.Text = "Nombre:";
             // 
             // txtNombreMaterias
             // 
-            this.txtNombreMaterias.Location = new System.Drawing.Point(131, 80);
+            this.txtNombreMaterias.Location = new System.Drawing.Point(174, 99);
+            this.txtNombreMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreMaterias.Name = "txtNombreMaterias";
-            this.txtNombreMaterias.Size = new System.Drawing.Size(251, 20);
+            this.txtNombreMaterias.Size = new System.Drawing.Size(334, 22);
             this.txtNombreMaterias.TabIndex = 2;
             // 
             // lblCodigoMaterias
             // 
             this.lblCodigoMaterias.AutoSize = true;
             this.lblCodigoMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoMaterias.Location = new System.Drawing.Point(31, 37);
+            this.lblCodigoMaterias.Location = new System.Drawing.Point(42, 45);
+            this.lblCodigoMaterias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoMaterias.Name = "lblCodigoMaterias";
-            this.lblCodigoMaterias.Size = new System.Drawing.Size(76, 24);
+            this.lblCodigoMaterias.Size = new System.Drawing.Size(98, 29);
             this.lblCodigoMaterias.TabIndex = 1;
             this.lblCodigoMaterias.Text = "Codigo:";
             // 
             // txtCodigoMaterias
             // 
-            this.txtCodigoMaterias.Location = new System.Drawing.Point(131, 41);
+            this.txtCodigoMaterias.Location = new System.Drawing.Point(174, 51);
+            this.txtCodigoMaterias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigoMaterias.Name = "txtCodigoMaterias";
-            this.txtCodigoMaterias.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoMaterias.Size = new System.Drawing.Size(132, 22);
             this.txtCodigoMaterias.TabIndex = 0;
-            // 
-            // idMateria
-            // 
-            this.idMateria.DataPropertyName = "idMateria";
-            this.idMateria.HeaderText = "ID";
-            this.idMateria.Name = "idMateria";
-            this.idMateria.ReadOnly = true;
-            this.idMateria.Visible = false;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "CODIGO";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // uv
-            // 
-            this.uv.DataPropertyName = "uv";
-            this.uv.HeaderText = "UV";
-            this.uv.Name = "uv";
-            this.uv.ReadOnly = true;
             // 
             // materias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 380);
+            this.ClientSize = new System.Drawing.Size(1188, 468);
             this.Controls.Add(this.lblBuscarMaterias);
             this.Controls.Add(this.txtBuscarMaterias);
             this.Controls.Add(this.grdDatosMaterias);
             this.Controls.Add(this.grbEdicionMaterias);
             this.Controls.Add(this.grbNavegacionMaterias);
             this.Controls.Add(this.grbDatosMaterias);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "materias";
             this.Text = "materias";
             this.Load += new System.EventHandler(this.materias_Load);
