@@ -22,16 +22,23 @@ namespace academica
         {
             InitializeComponent();
         }
-        private void docente_Load(object sender, EventArgs e)
+
+        private void grbDatosDocente_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void docentes_Load(object sender, EventArgs e)
         {
             actualizarDs();
         }
+
         private void actualizarDs()
         {
             ds.Clear();
             ds = objConexion.obtenerDatos();
             miTabla = ds.Tables["docentes"];
-            miTabla.PrimaryKey = new DataColumn[] { miTabla.Columns["idDocente"]};
+            miTabla.PrimaryKey = new DataColumn[] { miTabla.Columns["IdDocente"] };
             grdDatosDocente.DataSource = miTabla;
             mostrarDatosDocente();
         }
@@ -45,14 +52,14 @@ namespace academica
                 txtDireccionDocente.Text = miTabla.Rows[posicion].ItemArray[3].ToString();
                 txtTelefonoDocente.Text = miTabla.Rows[posicion].ItemArray[4].ToString();
                 txtDuiDocente.Text = miTabla.Rows[posicion].ItemArray[5].ToString();
-                txtEmailDocente.Text = miTabla.Rows[posicion].ItemArray[6].ToString();
-                txtEspecialidadDocente.Text = miTabla.Rows[posicion].ItemArray[7].ToString();
+                txtGmailDocente.Text = miTabla.Rows[posicion].ItemArray[6].ToString();
+                CboxEspecialidadesDocente.Text = miTabla.Rows[posicion].ItemArray[7].ToString();
 
                 lblRegistrosDocente.Text = (posicion + 1) + " de " + miTabla.Rows.Count;
             }
         }
 
-        private void btnSiguienteDocente_Click_1(object sender, EventArgs e)
+        private void btnSiguienteDocente_Click(object sender, EventArgs e)
         {
             if (posicion < miTabla.Rows.Count - 1)
             {
@@ -61,11 +68,11 @@ namespace academica
             }
             else
             {
-                MessageBox.Show("Está en el último registro", "Navegación de docentes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Esta en el ultimo registro", "Navegacion de docentes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btnAnteriorDocente_Click_1(object sender, EventArgs e)
+        private void btnAnteriorDocente_Click(object sender, EventArgs e)
         {
             if (posicion > 0)
             {
@@ -74,11 +81,11 @@ namespace academica
             }
             else
             {
-                MessageBox.Show("Está en el primer registro", "Navegación de docentes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Esta en el primer registro", "Navegacion de alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btnUltimoDocente_Click_1(object sender, EventArgs e)
+        private void btnUltimoDocente_Click(object sender, EventArgs e)
         {
             posicion = miTabla.Rows.Count - 1;
             mostrarDatosDocente();
@@ -108,12 +115,12 @@ namespace academica
                 limpiarCajas();
             }
             else
-            { // Guardar
-                String[] docente = {
-                accion, miTabla.Rows[posicion].ItemArray[0].ToString(),
-                txtCodigoDocente.Text, txtNombreDocente.Text, txtDireccionDocente.Text, txtTelefonoDocente.Text, txtDuiDocente.Text, txtEmailDocente.Text, txtEspecialidadDocente.Text
-            };
-                String respuesta = objConexion.administrarAlumnos(docente);
+            {//Guardar
+                String[] docentes = {
+                    accion, miTabla.Rows[posicion].ItemArray[0].ToString(),
+                    txtCodigoDocente.Text, txtNombreDocente.Text, txtDireccionDocente.Text, txtTelefonoDocente.Text, txtDuiDocente.Text, txtGmailDocente.Text, CboxEspecialidadesDocente.Text
+                };
+                String respuesta = objConexion.administrarDocentes(docentes);
                 if (respuesta != "1")
                 {
                     MessageBox.Show(respuesta, "Error en el registro de docentes", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -135,8 +142,8 @@ namespace academica
             txtDireccionDocente.Text = "";
             txtTelefonoDocente.Text = "";
             txtDuiDocente.Text = "";
-            txtEmailDocente.Text = "";
-            txtEspecialidadDocente.Text = "";
+            txtGmailDocente.Text = "";
+            CboxEspecialidadesDocente.Text = "";
         }
 
         private void btnModificarDocente_Click(object sender, EventArgs e)
@@ -147,9 +154,10 @@ namespace academica
                 btnModificarDocente.Text = "Cancelar";
                 accion = "modificar";
                 estadoControles(true);
+
             }
             else
-            { // Cancelar
+            {//Cancelar
                 mostrarDatosDocente();
                 btnNuevoDocente.Text = "Nuevo";
                 btnModificarDocente.Text = "Modificar";
@@ -159,16 +167,16 @@ namespace academica
 
         private void btnEliminarDocente_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de eliminar a " + txtNombreDocente.Text.Trim() + "?", "Eliminar docentes", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro de eliminar a " + txtNombreDocente.Text.Trim() + "?", "Eliminar docentes", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                String[] docente = {
-                "eliminar", miTabla.Rows[posicion].ItemArray[0].ToString()
-            };
-                String respuesta = objConexion.administrarAlumnos(docente);
+                String[] docentes = {
+                    "eliminar", miTabla.Rows[posicion].ItemArray[0].ToString()
+                };
+                String respuesta = objConexion.administrarDocentes(docentes);
                 if (respuesta != "1")
                 {
-                    MessageBox.Show(respuesta, "Error en la eliminación de docentes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(respuesta, "Error en el registro de docentes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -189,20 +197,35 @@ namespace academica
         private void txtBuscarDocente_KeyUp(object sender, KeyEventArgs e)
         {
             filtrarDatos(txtBuscarDocente.Text);
-            seleccionarDocente();
-        }
-
-        private void seleccionarDocente()
-        {
-            posicion = miTabla.Rows.IndexOf(miTabla.Rows.Find(grdDatosDocente.CurrentRow.Cells["idDocente"].Value.ToString()));
-            mostrarDatosDocente();
+            //if (e.KeyValue == 13) {//tecla enter
+            seleccionarAlDocente();
+            //}
         }
 
         private void grdDatosDocente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            seleccionarDocente();
+            seleccionarAlDocente();
+        }
 
+        private void txtBuscarDocente_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            filtrarDatos(txtBuscarDocente.Text);
+            //if (e.KeyValue == 13) {//tecla enter
+            seleccionarAlDocente();
+            //}
+        }
+
+        private void seleccionarAlDocente()
+        {
+            posicion = miTabla.Rows.IndexOf(miTabla.Rows.Find(grdDatosDocente.CurrentRow.Cells["IdDocente"].Value.ToString()));
+            mostrarDatosDocente();
+        }
+
+        private void grdDatosDocentes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccionarAlDocente();
         }
     }
- }
+}
+
 

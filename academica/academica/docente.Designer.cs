@@ -31,11 +31,11 @@
             this.lblBuscarDocente = new System.Windows.Forms.Label();
             this.txtBuscarDocente = new System.Windows.Forms.TextBox();
             this.grdDatosDocente = new System.Windows.Forms.DataGridView();
-            this.idAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbEdicionDocente = new System.Windows.Forms.GroupBox();
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnModificarDocente = new System.Windows.Forms.Button();
@@ -47,10 +47,10 @@
             this.btnAnteriorDocente = new System.Windows.Forms.Button();
             this.btnPrimeroDocente = new System.Windows.Forms.Button();
             this.grbDatosDocente = new System.Windows.Forms.GroupBox();
+            this.CboxEspecialidadesDocente = new System.Windows.Forms.ComboBox();
             this.lblEspecialidadDocente = new System.Windows.Forms.Label();
-            this.txtEspecialidadDocente = new System.Windows.Forms.TextBox();
-            this.lblEmailDocente = new System.Windows.Forms.Label();
-            this.txtEmailDocente = new System.Windows.Forms.TextBox();
+            this.txtGmailDocente = new System.Windows.Forms.TextBox();
+            this.lblGmailDocente = new System.Windows.Forms.Label();
             this.lblDuiDocente = new System.Windows.Forms.Label();
             this.txtDuiDocente = new System.Windows.Forms.TextBox();
             this.lblTelefonoDocente = new System.Windows.Forms.Label();
@@ -71,20 +71,21 @@
             // 
             this.lblBuscarDocente.AutoSize = true;
             this.lblBuscarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarDocente.Location = new System.Drawing.Point(584, 63);
+            this.lblBuscarDocente.Location = new System.Drawing.Point(574, 45);
             this.lblBuscarDocente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscarDocente.Name = "lblBuscarDocente";
             this.lblBuscarDocente.Size = new System.Drawing.Size(117, 29);
-            this.lblBuscarDocente.TabIndex = 15;
+            this.lblBuscarDocente.TabIndex = 20;
             this.lblBuscarDocente.Text = "BUSCAR:";
             // 
             // txtBuscarDocente
             // 
-            this.txtBuscarDocente.Location = new System.Drawing.Point(705, 69);
+            this.txtBuscarDocente.Location = new System.Drawing.Point(711, 45);
             this.txtBuscarDocente.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarDocente.Name = "txtBuscarDocente";
             this.txtBuscarDocente.Size = new System.Drawing.Size(461, 22);
-            this.txtBuscarDocente.TabIndex = 16;
+            this.txtBuscarDocente.TabIndex = 21;
+            this.txtBuscarDocente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDocente_KeyUp_1);
             // 
             // grdDatosDocente
             // 
@@ -92,76 +93,76 @@
             this.grdDatosDocente.AllowUserToDeleteRows = false;
             this.grdDatosDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatosDocente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAlumno,
-            this.codigo,
-            this.nombre,
-            this.direccion,
-            this.telefono});
-            this.grdDatosDocente.Location = new System.Drawing.Point(589, 96);
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.grdDatosDocente.Location = new System.Drawing.Point(579, 91);
             this.grdDatosDocente.Margin = new System.Windows.Forms.Padding(4);
             this.grdDatosDocente.Name = "grdDatosDocente";
             this.grdDatosDocente.ReadOnly = true;
             this.grdDatosDocente.RowHeadersWidth = 51;
-            this.grdDatosDocente.Size = new System.Drawing.Size(579, 349);
-            this.grdDatosDocente.TabIndex = 14;
+            this.grdDatosDocente.Size = new System.Drawing.Size(579, 310);
+            this.grdDatosDocente.TabIndex = 19;
             // 
-            // idAlumno
+            // dataGridViewTextBoxColumn1
             // 
-            this.idAlumno.DataPropertyName = "idAlumno";
-            this.idAlumno.HeaderText = "ID";
-            this.idAlumno.MinimumWidth = 6;
-            this.idAlumno.Name = "idAlumno";
-            this.idAlumno.ReadOnly = true;
-            this.idAlumno.Visible = false;
-            this.idAlumno.Width = 125;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idAlumno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // codigo
+            // dataGridViewTextBoxColumn2
             // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "CODIGO";
-            this.codigo.MinimumWidth = 6;
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CODIGO";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // nombre
+            // dataGridViewTextBoxColumn3
             // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 125;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // direccion
+            // dataGridViewTextBoxColumn4
             // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "DIRECCION";
-            this.direccion.MinimumWidth = 6;
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Width = 125;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "DIRECCION";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
-            // telefono
+            // dataGridViewTextBoxColumn5
             // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "TELEFONO";
-            this.telefono.MinimumWidth = 6;
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            this.telefono.Width = 125;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn5.HeaderText = "TELEFONO";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // grbEdicionDocente
             // 
             this.grbEdicionDocente.Controls.Add(this.btnEliminarDocente);
             this.grbEdicionDocente.Controls.Add(this.btnModificarDocente);
             this.grbEdicionDocente.Controls.Add(this.btnNuevoDocente);
-            this.grbEdicionDocente.Location = new System.Drawing.Point(341, 494);
+            this.grbEdicionDocente.Location = new System.Drawing.Point(340, 440);
             this.grbEdicionDocente.Margin = new System.Windows.Forms.Padding(4);
             this.grbEdicionDocente.Name = "grbEdicionDocente";
             this.grbEdicionDocente.Padding = new System.Windows.Forms.Padding(4);
             this.grbEdicionDocente.Size = new System.Drawing.Size(392, 71);
-            this.grbEdicionDocente.TabIndex = 13;
+            this.grbEdicionDocente.TabIndex = 18;
             this.grbEdicionDocente.TabStop = false;
             this.grbEdicionDocente.Text = "Navegacion";
             // 
@@ -175,6 +176,7 @@
             this.btnEliminarDocente.TabIndex = 6;
             this.btnEliminarDocente.Text = "Eliminar";
             this.btnEliminarDocente.UseVisualStyleBackColor = true;
+            this.btnEliminarDocente.Click += new System.EventHandler(this.btnEliminarDocente_Click);
             // 
             // btnModificarDocente
             // 
@@ -186,6 +188,7 @@
             this.btnModificarDocente.TabIndex = 5;
             this.btnModificarDocente.Text = "Modificar";
             this.btnModificarDocente.UseVisualStyleBackColor = true;
+            this.btnModificarDocente.Click += new System.EventHandler(this.btnModificarDocente_Click);
             // 
             // btnNuevoDocente
             // 
@@ -197,6 +200,7 @@
             this.btnNuevoDocente.TabIndex = 4;
             this.btnNuevoDocente.Text = "Nuevo";
             this.btnNuevoDocente.UseVisualStyleBackColor = true;
+            this.btnNuevoDocente.Click += new System.EventHandler(this.btnNuevoDocente_Click);
             // 
             // grbNavegacionDocente
             // 
@@ -205,12 +209,12 @@
             this.grbNavegacionDocente.Controls.Add(this.btnSiguienteDocente);
             this.grbNavegacionDocente.Controls.Add(this.btnAnteriorDocente);
             this.grbNavegacionDocente.Controls.Add(this.btnPrimeroDocente);
-            this.grbNavegacionDocente.Location = new System.Drawing.Point(49, 494);
+            this.grbNavegacionDocente.Location = new System.Drawing.Point(29, 442);
             this.grbNavegacionDocente.Margin = new System.Windows.Forms.Padding(4);
             this.grbNavegacionDocente.Name = "grbNavegacionDocente";
             this.grbNavegacionDocente.Padding = new System.Windows.Forms.Padding(4);
             this.grbNavegacionDocente.Size = new System.Drawing.Size(284, 71);
-            this.grbNavegacionDocente.TabIndex = 12;
+            this.grbNavegacionDocente.TabIndex = 17;
             this.grbNavegacionDocente.TabStop = false;
             this.grbNavegacionDocente.Text = "Navegacion";
             // 
@@ -235,7 +239,7 @@
             this.btnUltimoDocente.TabIndex = 3;
             this.btnUltimoDocente.Text = ">|";
             this.btnUltimoDocente.UseVisualStyleBackColor = true;
-            this.btnUltimoDocente.Click += new System.EventHandler(this.btnUltimoDocente_Click_1);
+            this.btnUltimoDocente.Click += new System.EventHandler(this.btnUltimoDocente_Click);
             // 
             // btnSiguienteDocente
             // 
@@ -247,7 +251,7 @@
             this.btnSiguienteDocente.TabIndex = 2;
             this.btnSiguienteDocente.Text = ">";
             this.btnSiguienteDocente.UseVisualStyleBackColor = true;
-            this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click_1);
+            this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
             // btnAnteriorDocente
             // 
@@ -259,7 +263,7 @@
             this.btnAnteriorDocente.TabIndex = 1;
             this.btnAnteriorDocente.Text = "<";
             this.btnAnteriorDocente.UseVisualStyleBackColor = true;
-            this.btnAnteriorDocente.Click += new System.EventHandler(this.btnAnteriorDocente_Click_1);
+            this.btnAnteriorDocente.Click += new System.EventHandler(this.btnAnteriorDocente_Click);
             // 
             // btnPrimeroDocente
             // 
@@ -271,13 +275,14 @@
             this.btnPrimeroDocente.TabIndex = 0;
             this.btnPrimeroDocente.Text = "|<";
             this.btnPrimeroDocente.UseVisualStyleBackColor = true;
+            this.btnPrimeroDocente.Click += new System.EventHandler(this.btnPrimeroDocente_Click);
             // 
             // grbDatosDocente
             // 
+            this.grbDatosDocente.Controls.Add(this.CboxEspecialidadesDocente);
             this.grbDatosDocente.Controls.Add(this.lblEspecialidadDocente);
-            this.grbDatosDocente.Controls.Add(this.txtEspecialidadDocente);
-            this.grbDatosDocente.Controls.Add(this.lblEmailDocente);
-            this.grbDatosDocente.Controls.Add(this.txtEmailDocente);
+            this.grbDatosDocente.Controls.Add(this.txtGmailDocente);
+            this.grbDatosDocente.Controls.Add(this.lblGmailDocente);
             this.grbDatosDocente.Controls.Add(this.lblDuiDocente);
             this.grbDatosDocente.Controls.Add(this.txtDuiDocente);
             this.grbDatosDocente.Controls.Add(this.lblTelefonoDocente);
@@ -289,58 +294,65 @@
             this.grbDatosDocente.Controls.Add(this.lblCodigoDocente);
             this.grbDatosDocente.Controls.Add(this.txtCodigoDocente);
             this.grbDatosDocente.Enabled = false;
-            this.grbDatosDocente.Location = new System.Drawing.Point(44, 51);
+            this.grbDatosDocente.Location = new System.Drawing.Point(29, 31);
             this.grbDatosDocente.Margin = new System.Windows.Forms.Padding(4);
             this.grbDatosDocente.Name = "grbDatosDocente";
             this.grbDatosDocente.Padding = new System.Windows.Forms.Padding(4);
-            this.grbDatosDocente.Size = new System.Drawing.Size(520, 394);
-            this.grbDatosDocente.TabIndex = 11;
+            this.grbDatosDocente.Size = new System.Drawing.Size(520, 360);
+            this.grbDatosDocente.TabIndex = 16;
             this.grbDatosDocente.TabStop = false;
             this.grbDatosDocente.Text = "Datos Docente";
+            this.grbDatosDocente.Enter += new System.EventHandler(this.grbDatosDocente_Enter);
+            // 
+            // CboxEspecialidadesDocente
+            // 
+            this.CboxEspecialidadesDocente.FormattingEnabled = true;
+            this.CboxEspecialidadesDocente.Items.AddRange(new object[] {
+            "Informatico",
+            "Contador",
+            "Matematico",
+            "Abogado",
+            "Salud"});
+            this.CboxEspecialidadesDocente.Location = new System.Drawing.Point(201, 325);
+            this.CboxEspecialidadesDocente.Name = "CboxEspecialidadesDocente";
+            this.CboxEspecialidadesDocente.Size = new System.Drawing.Size(121, 24);
+            this.CboxEspecialidadesDocente.TabIndex = 14;
             // 
             // lblEspecialidadDocente
             // 
             this.lblEspecialidadDocente.AutoSize = true;
             this.lblEspecialidadDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidadDocente.Location = new System.Drawing.Point(24, 340);
+            this.lblEspecialidadDocente.Location = new System.Drawing.Point(41, 320);
             this.lblEspecialidadDocente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEspecialidadDocente.Name = "lblEspecialidadDocente";
-            this.lblEspecialidadDocente.Size = new System.Drawing.Size(159, 29);
+            this.lblEspecialidadDocente.Size = new System.Drawing.Size(153, 29);
             this.lblEspecialidadDocente.TabIndex = 13;
-            this.lblEspecialidadDocente.Text = "Especialidad:";
+            this.lblEspecialidadDocente.Text = "Especalidad:";
             // 
-            // txtEspecialidadDocente
+            // txtGmailDocente
             // 
-            this.txtEspecialidadDocente.Location = new System.Drawing.Point(175, 347);
-            this.txtEspecialidadDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEspecialidadDocente.Name = "txtEspecialidadDocente";
-            this.txtEspecialidadDocente.Size = new System.Drawing.Size(241, 22);
-            this.txtEspecialidadDocente.TabIndex = 12;
+            this.txtGmailDocente.Location = new System.Drawing.Point(175, 279);
+            this.txtGmailDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGmailDocente.Name = "txtGmailDocente";
+            this.txtGmailDocente.Size = new System.Drawing.Size(132, 22);
+            this.txtGmailDocente.TabIndex = 11;
             // 
-            // lblEmailDocente
+            // lblGmailDocente
             // 
-            this.lblEmailDocente.AutoSize = true;
-            this.lblEmailDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailDocente.Location = new System.Drawing.Point(32, 292);
-            this.lblEmailDocente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmailDocente.Name = "lblEmailDocente";
-            this.lblEmailDocente.Size = new System.Drawing.Size(80, 29);
-            this.lblEmailDocente.TabIndex = 11;
-            this.lblEmailDocente.Text = "Email:";
-            // 
-            // txtEmailDocente
-            // 
-            this.txtEmailDocente.Location = new System.Drawing.Point(175, 299);
-            this.txtEmailDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmailDocente.Name = "txtEmailDocente";
-            this.txtEmailDocente.Size = new System.Drawing.Size(333, 22);
-            this.txtEmailDocente.TabIndex = 10;
+            this.lblGmailDocente.AutoSize = true;
+            this.lblGmailDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGmailDocente.Location = new System.Drawing.Point(41, 272);
+            this.lblGmailDocente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGmailDocente.Name = "lblGmailDocente";
+            this.lblGmailDocente.Size = new System.Drawing.Size(82, 29);
+            this.lblGmailDocente.TabIndex = 10;
+            this.lblGmailDocente.Text = "Gmail:";
             // 
             // lblDuiDocente
             // 
             this.lblDuiDocente.AutoSize = true;
             this.lblDuiDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuiDocente.Location = new System.Drawing.Point(41, 244);
+            this.lblDuiDocente.Location = new System.Drawing.Point(46, 233);
             this.lblDuiDocente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDuiDocente.Name = "lblDuiDocente";
             this.lblDuiDocente.Size = new System.Drawing.Size(55, 29);
@@ -349,7 +361,7 @@
             // 
             // txtDuiDocente
             // 
-            this.txtDuiDocente.Location = new System.Drawing.Point(175, 244);
+            this.txtDuiDocente.Location = new System.Drawing.Point(175, 240);
             this.txtDuiDocente.Margin = new System.Windows.Forms.Padding(4);
             this.txtDuiDocente.Name = "txtDuiDocente";
             this.txtDuiDocente.Size = new System.Drawing.Size(132, 22);
@@ -368,7 +380,7 @@
             // 
             // txtTelefonoDocente
             // 
-            this.txtTelefonoDocente.Location = new System.Drawing.Point(175, 191);
+            this.txtTelefonoDocente.Location = new System.Drawing.Point(175, 196);
             this.txtTelefonoDocente.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonoDocente.Name = "txtTelefonoDocente";
             this.txtTelefonoDocente.Size = new System.Drawing.Size(132, 22);
@@ -435,7 +447,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 664);
+            this.ClientSize = new System.Drawing.Size(1256, 588);
             this.Controls.Add(this.lblBuscarDocente);
             this.Controls.Add(this.txtBuscarDocente);
             this.Controls.Add(this.grdDatosDocente);
@@ -443,8 +455,8 @@
             this.Controls.Add(this.grbNavegacionDocente);
             this.Controls.Add(this.grbDatosDocente);
             this.Name = "docente";
-            this.Text = "docente";
-            this.Load += new System.EventHandler(this.docente_Load);
+            this.Text = "docentes";
+            this.Load += new System.EventHandler(this.docentes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosDocente)).EndInit();
             this.grbEdicionDocente.ResumeLayout(false);
             this.grbNavegacionDocente.ResumeLayout(false);
@@ -457,15 +469,14 @@
         }
 
         #endregion
-
         private System.Windows.Forms.Label lblBuscarDocente;
         private System.Windows.Forms.TextBox txtBuscarDocente;
         private System.Windows.Forms.DataGridView grdDatosDocente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.GroupBox grbEdicionDocente;
         private System.Windows.Forms.Button btnEliminarDocente;
         private System.Windows.Forms.Button btnModificarDocente;
@@ -477,6 +488,9 @@
         private System.Windows.Forms.Button btnAnteriorDocente;
         private System.Windows.Forms.Button btnPrimeroDocente;
         private System.Windows.Forms.GroupBox grbDatosDocente;
+        private System.Windows.Forms.Label lblEspecialidadDocente;
+        private System.Windows.Forms.TextBox txtGmailDocente;
+        private System.Windows.Forms.Label lblGmailDocente;
         private System.Windows.Forms.Label lblDuiDocente;
         private System.Windows.Forms.TextBox txtDuiDocente;
         private System.Windows.Forms.Label lblTelefonoDocente;
@@ -487,9 +501,6 @@
         private System.Windows.Forms.TextBox txtNombreDocente;
         private System.Windows.Forms.Label lblCodigoDocente;
         private System.Windows.Forms.TextBox txtCodigoDocente;
-        private System.Windows.Forms.TextBox txtEspecialidadDocente;
-        private System.Windows.Forms.Label lblEmailDocente;
-        private System.Windows.Forms.TextBox txtEmailDocente;
-        private System.Windows.Forms.Label lblEspecialidadDocente;
+        private System.Windows.Forms.ComboBox CboxEspecialidadesDocente;
     }
 }

@@ -8239,19 +8239,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\campo\\.nuget\\packages\\": {}
+    "C:\\Users\\campo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\campo\\OneDrive\\Escritorio\\Visual\\REPOSITORIO\\sistema_academico\\sistema_academico\\sistema_academico.csproj",
+      "projectUniqueName": "C:\\Users\\campo\\Desktop\\re\\sistema_academico\\sistema_academico\\sistema_academico.csproj",
       "projectName": "sistema_academico",
-      "projectPath": "C:\\Users\\campo\\OneDrive\\Escritorio\\Visual\\REPOSITORIO\\sistema_academico\\sistema_academico\\sistema_academico.csproj",
+      "projectPath": "C:\\Users\\campo\\Desktop\\re\\sistema_academico\\sistema_academico\\sistema_academico.csproj",
       "packagesPath": "C:\\Users\\campo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\campo\\OneDrive\\Escritorio\\Visual\\REPOSITORIO\\sistema_academico\\sistema_academico\\obj\\",
+      "outputPath": "C:\\Users\\campo\\Desktop\\re\\sistema_academico\\sistema_academico\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\campo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
