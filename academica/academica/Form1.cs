@@ -10,18 +10,6 @@ using System.Windows.Forms;
 
 namespace academica {
     public partial class Form1 : Form {
-        /*
-        TAREA: Miercoles 02 de Octubre.
-        1. Crear el formulario de docentes.
-            Campos:
-                * codigo, 
-                * nombre, 
-                * direccion, 
-                * telefono, 
-                * dui,
-                * email, 
-                * especialidad. > ComboBox ("Informatico, Contador, Matematico, Abogado, Salud, etc.")
-         */
         Conexion objConexion = new Conexion();
         DataSet ds = new DataSet();
         DataTable miTabla = new DataTable();
@@ -165,6 +153,16 @@ namespace academica {
         }
         private void grdDatosAlumnos_CellClick(object sender, DataGridViewCellEventArgs e) {
             seleccionarAllumno();
+        }
+
+        private void grbDatosAlumno_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCodigoAlumno_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
