@@ -115,7 +115,7 @@ namespace academica
                 limpiarCajas();
             }
             else
-            {//Guardar
+            {
                 String[] docentes = {
                     accion, miTabla.Rows[posicion].ItemArray[0].ToString(),
                     txtCodigoDocente.Text, txtNombreDocente.Text, txtDireccionDocente.Text, txtTelefonoDocente.Text, txtDuiDocente.Text, txtGmailDocente.Text, CboxEspecialidadesDocente.Text
@@ -157,7 +157,7 @@ namespace academica
 
             }
             else
-            {//Cancelar
+            {
                 mostrarDatosDocente();
                 btnNuevoDocente.Text = "Nuevo";
                 btnModificarDocente.Text = "Modificar";
@@ -197,9 +197,9 @@ namespace academica
         private void txtBuscarDocente_KeyUp(object sender, KeyEventArgs e)
         {
             filtrarDatos(txtBuscarDocente.Text);
-            //if (e.KeyValue == 13) {//tecla enter
+            
             seleccionarAlDocente();
-            //}
+            
         }
 
         private void grdDatosDocente_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -210,7 +210,7 @@ namespace academica
         private void txtBuscarDocente_KeyUp_1(object sender, KeyEventArgs e)
         {
             filtrarDatos(txtBuscarDocente.Text);
-            //if (e.KeyValue == 13) {//tecla enter
+            
             seleccionarAlDocente();
             //}
         }
@@ -218,12 +218,30 @@ namespace academica
         private void seleccionarAlDocente()
         {
             posicion = miTabla.Rows.IndexOf(miTabla.Rows.Find(grdDatosDocente.CurrentRow.Cells["IdDocente"].Value.ToString()));
+            
             mostrarDatosDocente();
         }
 
         private void grdDatosDocentes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             seleccionarAlDocente();
+        }
+
+        private void txtBuscarDocente_TextChanged(object sender, EventArgs e)
+        {
+
+            string nombre = txtBuscarDocente.Text;
+            BuscarNombre(nombre);
+        }
+
+        private void BuscarNombre(string nombre)
+        {
+            DataView dv = miTabla.DefaultView;
+            dv.RowFilter = "nombre like '%" + nombre + "%'";
+            if (dv.Count == 0)
+            {
+                MessageBox.Show("No se encontró el nombre. Intente de nuevo.", "Error");
+            }
         }
     }
 }

@@ -40,7 +40,6 @@ namespace sistema_academico.Controllers
 
             return alumno;
         }
-
         // PUT: api/Alumnos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -68,8 +67,8 @@ namespace sistema_academico.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
+            return CreatedAtAction("GetAlumno", new { id = alumno.idAlumno }, alumno);
+            //return NoContent();
         }
 
         // POST: api/Alumnos

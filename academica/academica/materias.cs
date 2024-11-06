@@ -148,5 +148,10 @@ namespace academica
                 MessageBox.Show("Error: Registro NO encontrado", "Error en la seleccion de materias", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtBuscarMaterias_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,12 +1,172 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\campo\\Desktop\\Progra1_2024-semi-Bloque2\\Progra1_2024-semi-Bloque2\\academica\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|c:\\users\\campo\\desktop\\visual\\re\\academica\\academica\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\materias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\campo\\source\\repos\\Parcial II\\Parcial II\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251DAC95-1C1A-45B5-8FD9-DBF5B58BFB1F}|academica\\academica.csproj|solutionrelative:academica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "principal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\principal.Designer.cs",
+              "RelativeDocumentMoniker": "academica\\principal.Designer.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\principal.Designer.cs",
+              "RelativeToolTip": "academica\\principal.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T01:40:40.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\source\\repos\\Parcial II\\Parcial II\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Parcial II\\Parcial II\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\campo\\source\\repos\\Parcial II\\Parcial II\\Form1.Designer.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Parcial II\\Parcial II\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T16:47:34.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\Form1.cs",
+              "RelativeDocumentMoniker": "academica\\Form1.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\Form1.cs",
+              "RelativeToolTip": "academica\\Form1.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:29:38.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "materias.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs",
+              "RelativeDocumentMoniker": "academica\\materias.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs",
+              "RelativeToolTip": "academica\\materias.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAuwE0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:07:19.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "docente.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs",
+              "RelativeDocumentMoniker": "academica\\docente.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs",
+              "RelativeToolTip": "academica\\docente.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:56:02.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\principal.cs",
+              "RelativeDocumentMoniker": "academica\\principal.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "academica\\principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:21.339Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "materias.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs",
+              "RelativeDocumentMoniker": "academica\\materias.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\materias.cs [Dise\u00F1o]",
+              "RelativeToolTip": "academica\\materias.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:19.777Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\Form1.cs",
+              "RelativeDocumentMoniker": "academica\\Form1.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "academica\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:16.38Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "docente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs",
+              "RelativeDocumentMoniker": "academica\\docente.cs",
+              "ToolTip": "C:\\Users\\campo\\Desktop\\Visual\\re\\academica\\academica\\docente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "academica\\docente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:15.05Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
