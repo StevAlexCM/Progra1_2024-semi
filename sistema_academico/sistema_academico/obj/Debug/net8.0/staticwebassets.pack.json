@@ -1,19 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi-bloque3\\sistema_academico\\sistema_academico\\wwwroot\\img\\logo.png",
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi-bloque3\\sistema_academico\\sistema_academico\\wwwroot\\views\\Alumno.html",
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Alumno.html",
       "PackagePath": "staticwebassets\\views\\Alumno.html"
     },
     {
-      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi-bloque3\\sistema_academico\\sistema_academico\\wwwroot\\views\\busqueda_alumno.html",
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Docente.html",
+      "PackagePath": "staticwebassets\\views\\Docente.html"
+    },
+    {
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\busqueda_alumno.html",
       "PackagePath": "staticwebassets\\views\\busqueda_alumno.html"
     },
     {
-      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi-bloque3\\sistema_academico\\sistema_academico\\wwwroot\\views\\index.html",
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\busqueda_docente.html",
+      "PackagePath": "staticwebassets\\views\\busqueda_docente.html"
+    },
+    {
+      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\index.html",
       "PackagePath": "staticwebassets\\views\\index.html"
     },
     {
