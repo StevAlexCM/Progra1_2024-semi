@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Bus San Vicente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ffcc66, #ff9966);
+            background: linear-gradient(to bottom, #FF7F50, #FFD700); /* Fondo del segundo diseño */
+            background-attachment: fixed; /* Fondo fijo */
+            color: #333;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .icon {
+            margin: 20px 0;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .link {
+            font-weight: bold;
+            color: #006400;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo {
+            margin-top: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        /* Estilos para el icono de flecha delicado */
+        .arrow-icon {
+            position: fixed; /* Mantiene la posición fija en la pantalla */
+            top: 20px; /* Ajusta la posición desde la parte superior */
+            left: 20px; /* Ajusta la posición desde la parte izquierda */
+            width: 50px; /* Tamaño del icono */
+            height: 50px; /* Tamaño del icono */
+            cursor: pointer;
+            background-color: #FDEBD0; /* Color suave y elegante para el fondo */
+            border-radius: 50%; /* Forma circular */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+            overflow: hidden;
+        }
+
+        .arrow-icon:active {
+            transform: scale(0.95); /* Efecto de pulsación sutil */
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3); /* Sombra más prominente al presionar */
+        }
+
+        /* Icono de flecha delicada dentro del círculo */
+        .arrow-icon::before {
+            content: ''; /* Usamos un pseudo-elemento para agregar la flecha */
+            width: 12px; /* Tamaño más pequeño para la flecha */
+            height: 12px; /* Tamaño más pequeño para la flecha */
+            border-left: 2px solid #B9774B; /* Color de la flecha */
+            border-bottom: 2px solid #B9774B; /* Parte inferior de la flecha */
+            transform: rotate(45deg); /* Rotación para crear la flecha */
+            transition: transform 0.3s ease; /* Transición suave para el giro */
+        }
+
+        /* Efecto de hover: suavidad y transiciones */
+        .arrow-icon:hover {
+            background-color: #FAD7A0; /* Color de fondo más cálido en hover */
+            transform: scale(1.1); /* Efecto de agrandar ligeramente al pasar el ratón */
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+        }
+
+            .arrow-icon:hover::before {
+                transform: rotate(45deg) scale(1.2); /* Hacer la flecha un poco más grande en hover */
+            }
+    </style>
+</head>
+<body>
+    <div class="arrow-icon" onclick="window.location.href='destinos.html'"></div>
+
+    <div class="container">
+        <div class="title">Ruta Hospital Bloom San Salvador</div>
+        <div class="subtitle">Ruta 302, 29 O 20-A , 4 O 6</div>
+
+        <div class="icon">
+            🚍
+        </div>
+
+        <div class="text">
+            La Ruta 302 va de Usulutan a San Salvador, se tomara una escala Desde la Terminal del Sur, toma el bus de la Ruta 29 o Ruta 29-A en dirección al centro de San Salvador. Estos buses te llevarán desde la Terminal del Sur hasta las cercanías del centro de la ciudad.
+            Luego tomamos 30-B y bajamos en la parada 44
+        </div>
+
+        <div class="text" style="margin-top: 20px;">
+            A continuación te mostraremos la ubicación de la Ruta.
+        </div>
+
+        <div class="map-container">
+            <!-- Reemplaza el src del iframe con el enlace embebido de Google Maps -->
+            <iframe src="https://www.google.com/maps/d/embed?mid=1amrk7yyCqpHjP1Buc6oMK5fSvDn4IOk&ehbc=2E312F"
+                    width="100%"
+                    height="600px"
+                    style="border:0;"
+                    allowfullscreen="1"
+                    loading="lazy">
+            </iframe>
+
+            <iframe src="https://www.google.com/maps/d/embed?mid=1qHvqwU_CSwtjuEy5jMawDZbKx3fTX78&ehbc=2E312F"
+                    width="100%"
+                    height="600px"
+                    style="border:0;"
+                    allowfullscreen="1"
+                    loading="lazy">
+            </iframe>
+
+            <iframe src="https://www.google.com/maps/d/embed?mid=1mXaAvshhvmI2jz4KO6kNUVvf-S5ZEPo&ehbc=2E312F"
+                    width="100%"
+                    height="600px"
+                    style="border:0;"
+                    allowfullscreen="1"
+                    loading="lazy">
+            </iframe>
+
+            <div class="logo">
+                <img src="../user_image_20240926_172115381a03eec3e.png" alt="Logo Rutbuss" class="logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

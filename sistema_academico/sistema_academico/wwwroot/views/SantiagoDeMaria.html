@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta de Bus Santiago de Maria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ffcc66, #ff9966);
+            color: #333;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .icon {
+            margin: 20px 0;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 200px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .logo {
+            margin-top: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        /* Estilos para el icono de brújula */
+        .compass-icon {
+            position: fixed; /* Cambié de absolute a fixed */
+            top: 20px; /* Ajusta la posición desde la parte superior */
+            left: 20px; /* Ajusta la posición desde la parte izquierda */
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background: url('https://img.icons8.com/ios-filled/50/ffffff/compass.png') center/cover no-repeat;
+            border-radius: 50%;
+            background-color: #006400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+            .compass-icon:hover {
+                background-color: #228B22;
+            }
+    </style>
+</head>
+<body>
+    <div class="compass-icon" onclick="window.location.href='destinos.html'"></div>
+
+    <div class="container">
+        <div class="title">Ruta a Santiago de Maria</div>
+        <div class="subtitle">RUTA 12</div>
+
+        <div class="icon">
+            🚍
+        </div>
+
+        <div class="text">
+            La ruta 12 inicia en Santiago de María, finaliza en Desvío El Tránsito, se puede tomar esta ruta en la despensa de Don Juan. Pasa por Tecapán, Ozatlán, Usulután, Santa María, Ereguayquín, Concepción Batres.
+            <br>
+            Tarifa de viaje: $ 0.25
+        </div>
+
+        <div class="text" style="margin-top: 20px;">
+            A continuación te mostraremos la ubicación de la Ruta.
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Afdg1IWttRFVYSdn79qL2pnUuxb0nKY&ehbc=2E312F"
+                    width="100%"
+                    height="600px"
+                    style="border:0;"
+                    allowfullscreen="1"
+                    loading="lazy">
+            </iframe>
+
+            <div class="logo">
+                <img src="../user_image_20240926_172115381a03eec3e.png" alt="Logo Rutbuss" class="logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

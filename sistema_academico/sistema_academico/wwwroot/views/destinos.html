@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Botones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* estabece el fondo y el color de los botones*/
+        body { 
+            background: linear-gradient(to bottom, #FF7F50, #FFD700);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            color: #333;
+        }
+        /*crea botones con fondo gris claro, letras verdes*/
+        .button {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: green;
+            background-color: #D3D3D3;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+            .button:hover {
+                background-color: #A9A9A9;
+            }
+
+            .button.selected {
+                background-color: #32CD32;
+                color: white;
+            }
+
+                .button.selected::after {
+                    content: " ✔️";
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+                /*crea el boton empezar fondo verde que principalmente esta desactivado*/
+        #btnEmpezar {
+            display: none;/* esta funcion hase que el boton este desactivado hasta que se cumpla una condicion*/
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*barra de menu*/
+        .menu-bar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        /*lineas del boton menu*/
+            .menu-bar div {
+                width: 35px;
+                height: 5px;
+                margin: 6px 0;
+                background-color: green;
+                transition: 0.4s;
+            }
+            /*contenedor del menu*/
+        .menu {
+            display: none;/*funcion que hase que aparezca desactivado por defecto*/
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            z-index: 9;
+        }
+        /*enlaces del menu*/
+            .menu a {
+                display: block;
+                padding: 10px;
+                color: green;
+                text-decoration: none;
+                margin: 5px 0;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            /*efectos al pasar el cursor sobre los enlaces*/
+                .menu a:hover {
+                    background-color: #f1f1f1;
+                }
+                /*activa el menu y lo hase visible*/
+            .menu.active {
+                display: block;
+            }
+            /*formulario de comentarios*/
+        .comment-form {
+            display: none; /* El formulario está oculto por defecto */
+            margin-top: 10px; /* Espacio para que aparezca debajo del botón */
+            text-align: center;
+        }
+        /*area de texto para el comentario*/
+            .comment-form textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                resize: none;
+            }
+            /*Boton de envio de comentario*/
+            .comment-form button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #28a745;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            /*Contenedor de rutas*/
+        .routes-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+        /*listas de rutas*/
+        .route-list {
+            flex-direction: column;
+            align-items: center;
+            display: none;
+            width: 250px;
+        }
+        /*lista activa de rutas*/
+            .route-list.active {
+                display: flex;
+            }
+            /*Contenedor de busueda*/
+        .search-container {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        /*campo de entrada de busqueda*/
+        .search-input {
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        /*contenedor de botones*/
+        .button-container {
+            display: flex;
+            gap: 10px; /* Reduce el espacio entre botones */
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        /*logo*/
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        /*estilo general para el contenedor de opciones*/
+        .route-options {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 10px;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+            /*Estilo cuando el contenedor de opciones está activo*/
+            .route-options.active {
+                display: flex;
+            }
+        /*Asegura que el contenedor de opciones tenga un tamaño y desplazamiento adecuado*/
+        .route-options {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 10px;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 200px; /* Altura máxima del contenedor */
+            overflow-y: auto; /* Habilitar la barra de desplazamiento vertical */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de menú que se activa al hacer clic, mostrando opciones adicionales -->
+    <div class="menu-bar" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- Menú de opciones oculto por defecto, con enlaces como "Volver al Inicio" y "Ayúdanos a expandirnos" -->
+    <div id="menu" class="menu">
+        <a href="inicio.html">Volver al Inicio</a>
+        <a href="#" onclick="toggleCommentForm()">Ayúdanos a expandirnos</a>
+        <!-- Formulario de comentario oculto inicialmente, que aparece al hacer clic en "Ayúdanos a expandirnos" -->
+        <div id="commentFormContainer" class="comment-form">
+            <textarea id="commentText" rows="4" placeholder="Escribe tus sugerencias aquí..."></textarea>
+            <button onclick="submitComment()">Enviar comentario</button>
+        </div>
+    </div>
+    <!-- Logo de la aplicación -->
+    <div class="logo-container">
+        <img src="../user_image_20240926_172115381a03eec3e.png" alt="Logo Rutbuss" class="logo">
+    </div>
+    <!-- Título principal de la página -->
+    <h1 style="color: green;">Elige tu Ruta</h1>
+    <!-- Contenedor para los botones de selección: "Inicio" y "Categorías" -->
+    <div class="button-container">
+        <button class="button" onclick="toggleRoutes('inicioContainer')">Inicio</button>
+        <button class="button" onclick="toggleRoutes('categoryContainer')">Categorías</button>
+    </div>
+    <!-- Botón para comenzar, inicialmente oculto -->
+    <button id="btnEmpezar" onclick="empezarRuta()">Empezar</button>
+    <!-- Contenedor para las rutas -->
+    <div class="routes-container">
+        <!-- Contenedor de rutas de Inicio, que se activa cuando se selecciona "Inicio" -->
+        <div class="route-list" id="inicioContainer">
+            <!-- Contenedor de búsqueda para filtrar rutas de inicio -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="inicioSearch" placeholder="Buscar Ruta de Inicio" oninput="filterRoutes('inicioSearch', 'inicioContainer')">
+            </div>
+            <!-- Botón para seleccionar una ruta de inicio (Ejemplo: Usulután) -->
+            <h3>Rutas de Inicio</h3>
+            <button class="button" onclick="selectCategory(this, 'inicio')">Usulután</button>
+        </div>
+        <!-- Contenedor de categorías de rutas -->
+        <div class="route-list" id="categoryContainer">
+            <!-- Contenedor de búsqueda para filtrar categorías -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="categorySearch" placeholder="Buscar en Categorías" oninput="filterRoutes('categorySearch', 'categoryContainer')">
+            </div>
+            <h3>Categorías</h3>
+            <!-- Botón que despliega las opciones de hospitales -->
+            <button class="button" onclick="toggleOptions('hospitalesOptions', this)">Hospitales</button>
+            <div class="route-options" id="hospitalesOptions">
+                <input type="text" class="search-input" id="hospitalSearch" placeholder="Buscar Hospital" oninput="filterRoutes('hospitalSearch', 'hospitalesOptions')">
+                <button class="button" onclick="selectCategory(this, 'hospitales')">H. de maternidad</button>
+                <button class="button" onclick="selectCategory(this, 'hospitales')">H. Bloom</button>
+                <button class="button" onclick="selectCategory(this, 'hospitales')">H. Rosales</button>
+                <button class="button" onclick="selectCategory(this, 'hospitales')">H. Zacamil</button>
+                <button class="button" onclick="selectCategory(this, 'hospitales')">H. San Juan De Dios</button>
+            </div>
+            <!-- Botón que despliega las opciones de departamentos -->
+            <button class="button" onclick="toggleOptions('departamentosOptions', this)">Departamentos</button>
+            <div class="route-options" id="departamentosOptions">
+                <input type="text" class="search-input" id="departamentosSearch" placeholder="Buscar Departamento" oninput="filterRoutes('departamentosSearch', 'departamentosOptions')">
+                <button class="button" onclick="selectCategory(this, 'departamentos')">San Salvador</button>
+                <button class="button" onclick="selectCategory(this, 'departamentos')">San Miguel</button>
+                <button class="button" onclick="selectCategory(this, 'departamentos')">San Vicente</button>
+            </div>
+            <!-- Botón que despliega las opciones de sitios turisticos -->
+            <button class="button" onclick="toggleOptions('sitiosTuristicosOptions', this)">Sitios Turísticos</button>
+            <div class="route-options" id="sitiosTuristicosOptions">
+                <input type="text" class="search-input" id="sitiosTuristicosSearch" placeholder="Buscar Sitio Turístico" oninput="filterRoutes('sitiosTuristicosSearch', 'sitiosTuristicosOptions')">
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">Playa El Espino</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">Puerta del Diablo</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">Parque de Alegría</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">Centro Histórico de SS</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">BINAES</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosTuristicos')">Bahía de Jiquilisco</button>
+
+            </div>
+            <!-- Botón que despliega las opciones de sitios religiosos -->
+            <button class="button" onclick="toggleOptions('sitiosReligiososOptions', this)">Sitios Religiosos</button>
+            <div class="route-options" id="sitiosReligiososOptions">
+                <input type="text" class="search-input" id="sitiosReligiososSearch" placeholder="Buscar Sitio Religioso" oninput="filterRoutes('sitiosReligiososSearch', 'sitiosReligiososOptions')">
+                <button class="button" onclick="selectCategory(this, 'sitiosReligiosos')">Catedral de Santa Ana</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosReligiosos')">Iglesia de Ciudad Barrios</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosReligiosos')">Cerro de Las pavas</button>
+                <button class="button" onclick="selectCategory(this, 'sitiosReligiosos')">Santuario de la Virgen de Candelaria</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedCategory = null;// Variable para almacenar la categoría seleccionada.
+        let destinationPage = ""; // Variable para almacenar la página de destino (por ejemplo, ruta seleccionada).
+        // Función para alternar la visibilidad de las categorías de rutas.
+        function toggleRoutes(containerId) {
+            // Obtener el contenedor de la categoría usando el ID proporcionado
+            const container = document.getElementById(containerId);
+            const isActive = container.classList.contains('active');
+
+            // Cerrar todas las opciones abiertas y desmarcar la categoría seleccionada
+            const openOptions = document.querySelectorAll('.route-options.active');
+            openOptions.forEach(option => option.classList.remove('active'));
+
+            if (isActive) {
+                // Si ya está activo, se cierra
+                container.classList.remove('active');
+                deselectCategory();  // Desmarcar la categoría seleccionada cuando se cierra
+            } else {
+                // Abrir la nueva categoría
+                container.classList.add('active');
+            }
+        }
+
+        function toggleOptions(optionsId, button) {
+            const optionsContainer = document.getElementById(optionsId);// Obtiene el contenedor de opciones con el id proporcionado.
+            const rect = button.getBoundingClientRect();// Obtiene la posición y tamaño del botón.
+
+            // Cerrar otras opciones abiertas
+            const openOptions = document.querySelectorAll('.route-options.active');
+            openOptions.forEach(option => {
+                if (option.id !== optionsId) {
+                    option.classList.remove('active');
+                }
+            });
+
+            // Abrir la opción seleccionada
+            optionsContainer.classList.toggle('active');
+            optionsContainer.style.top = `${rect.top + window.scrollY}px`;
+            optionsContainer.style.left = `${rect.right + 10}px`; // Espacio entre botón y opciones
+        }
+        //filtra las opciones(boton de busqueda)
+        function filterRoutes(searchId, containerId) {
+            const searchInput = document.getElementById(searchId).value.toLowerCase();
+            const container = document.getElementById(containerId);
+            const buttons = container.querySelectorAll('.button');
+
+            buttons.forEach(button => {
+                const text = button.textContent.toLowerCase(); // Convierte el texto del botón a minúsculas.
+                if (text.includes(searchInput)) { // Verifica si el texto del botón contiene el término de búsqueda.
+                    button.style.display = 'block'; // Muestra el botón si cumple la condición.
+                } else {
+                    button.style.display = 'none';// Oculta el botón si no cumple la condición.
+                }
+            });
+        }
+
+        function selectCategory(button, category) {
+            // Verificar si la categoría ya está seleccionada
+            if (selectedCategory === button) {
+                // Si ya está seleccionada, desmarcarla
+                deselectCategory();
+                return;
+            }
+
+            // Si no está seleccionada, seleccionar la nueva categoría
+            if (selectedCategory) {
+                selectedCategory.classList.remove('selected');
+            }
+            button.classList.add('selected');
+            selectedCategory = button;
+
+            // Establecer la página de destino según la categoría seleccionada
+            if (category === 'inicio') {
+                destinationPage = "inicioRuta.html"; // Página para inicio
+            } else if (category === 'hospitales') {
+                if (button.textContent === "H. Bloom") {
+                    destinationPage = "hospitalBloom.html"; // Página específica para Hospital Central
+                } else if (button.textContent === "H. de maternidad") {
+                    destinationPage = "Hmaternidad.html"; // Página específica para San Salvador
+                }
+                else if (button.textContent === "H. Rosales") {
+                    destinationPage = "Hrosales.html"; // Página específica para San Salvador
+                } else if (button.textContent === "H. Zacamil") {
+                    destinationPage = "Hzacamil.html"; // Página específica para San Salvador
+                } else if (button.textContent === "H. San Juan De Dios") {
+                    destinationPage = "HsjdDios.html"; // Página específica para San Salvador
+                }
+            } else if (category === 'departamentos') {
+                if (button.textContent === "Santa Ana") {
+                    destinationPage = "santaAnaRuta.html"; // Página específica para Santa Ana
+                } else if (button.textContent === "San Salvador") {
+                    destinationPage = "SanSalvador.html"; // Página específica para San Salvador
+                } else if (button.textContent === "San Miguel") {
+                    destinationPage = "SanMiguel.html"; // Página específica para San Salvador
+                } else if (button.textContent === "San Vicente") {
+                    destinationPage = "SanVicente.html"; // Página específica para San Salvador
+                }
+            } else if (category === 'sitiosTuristicos') {
+                if (button.textContent === "Playa El Espino") {
+                    destinationPage = "playaEspino.html"; // Página específica para Playa El Espino
+                } else if (button.textContent === "Puerta del Diablo") {
+                    destinationPage = "PuertaDelDiablo.html"; // Página específica para Puerta del Diablo
+                } else if (button.textContent === "Parque de Alegría") {
+                    destinationPage = "ParqueDeAlegria.html"; // Página específica para Parque de Alegría
+                } else if (button.textContent === "Centro Histórico de SS") {
+                    destinationPage = "CentroHistoricoSS.html"; // Página específica para Centro Histórico de San Salvador
+                } else if (button.textContent === "BINAES") {
+                    destinationPage = "Binaes.html"; // Página específica para Biblioteca Nacional (BINAES)
+                } else if (button.textContent === "Bahía de Jiquilisco") {
+                    destinationPage = "BahiaJiquilisco.html"; // Página específica para Bahía de Jiquilisco
+                }
+            } else if (category === 'sitiosReligiosos') {
+                if (button.textContent === "Catedral de Santa Ana") {
+                    destinationPage = "CatedralSantaAna.html"; // Página específica para Catedral de Santa Ana
+                } else if (button.textContent === "Iglesia de Ciudad Barrios") {
+                    destinationPage = "IglesiaCiudadBarrios.html"; // Página específica para Iglesia de Ciudad Barrios
+                }
+                else if (button.textContent === "Santuario de la Virgen de Candelaria") {
+                    destinationPage = "SantuarioCandelaria.html"; // Página específica para Santuario de la Virgen de Candelaria
+                } else if (button.textContent === "Cerro de Las pavas") {
+                    destinationPage = "CerroLasPavas.html"; // Página específica para Santuario de la Virgen de Candelaria
+                }
+            }
+
+
+            // Mostrar el botón "Empezar"
+            document.getElementById('btnEmpezar').style.display = 'block';
+        }
+
+        function deselectCategory() {
+            // Desmarcar la categoría seleccionada
+            if (selectedCategory) {
+                selectedCategory.classList.remove('selected');
+            }
+            selectedCategory = null;
+            destinationPage = ""; // Limpiar la página de destino
+            document.getElementById('btnEmpezar').style.display = 'none'; // Ocultar el botón "Empezar"
+        }
+        // Función para iniciar la ruta, redirigiendo a la página de destino si se ha seleccionado una opción.
+        function empezarRuta() {
+            if (destinationPage) { // Verifica si hay una página de destino seleccionada
+                window.location.href = destinationPage; // Redirige a la página de destino
+            } else { // Si no se ha seleccionado una opción, muestra un mensaje de alerta
+                alert("Por favor, selecciona una opción antes de continuar.");
+            }
+        }
+        // Función para alternar la visibilidad del formulario de comentarios.
+        function toggleCommentForm() { 
+            const commentForm = document.getElementById('commentFormContainer'); // Obtiene el contenedor del formulario de comentarios
+            commentForm.style.display = commentForm.style.display === 'none' || commentForm.style.display === '' ? 'block' : 'none';  // Alterna el estilo de visualización entre 'none' (oculto) y 'block' (visible)
+        }
+        // Función para mostrar u ocultar el menú de navegación.
+        function toggleMenu() {
+            const menu = document.getElementById('menu'); // Obtiene el elemento del menú
+            menu.classList.toggle('active');  // Alterna la clase 'active' en el menú, mostrando u ocultando el menú de navegación
+        }
+        // Función para enviar el comentario.
+        function submitComment() {
+            const commentText = document.getElementById('commentText').value; // Obtiene el texto del comentario desde el área de texto
+
+            if (commentText.trim()) {  // Verifica si el comentario no está vacío
+                console.log('Comentario enviado:', commentText); // Muestra el comentario en la consola
+                alert('Gracias por tu comentario.');  // Muestra una alerta de agradecimiento
+                document.getElementById('commentText').value = ''; // Limpia el campo de texto
+            } else {  // Si el campo está vacío, muestra una alerta solicitando un comentario
+                alert('Por favor, escribe un comentario antes de enviarlo.');
+            }
+        }
+
+    </script>
+
+
+
+
+
+</body>
+</html>
+
+

@@ -1,28 +1,124 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\img\\logo.png",
-      "PackagePath": "staticwebassets\\img\\logo.png"
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\apple-touch-icon.png"
     },
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Alumno.html",
-      "PackagePath": "staticwebassets\\views\\Alumno.html"
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\favicon-32x32.png"
     },
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Docente.html",
-      "PackagePath": "staticwebassets\\views\\Docente.html"
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\user_image_20240926_172115381a03eec3e.png",
+      "PackagePath": "staticwebassets\\user_image_20240926_172115381a03eec3e.png"
     },
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\busqueda_alumno.html",
-      "PackagePath": "staticwebassets\\views\\busqueda_alumno.html"
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\BahiaJiquilisco.html",
+      "PackagePath": "staticwebassets\\views\\BahiaJiquilisco.html"
     },
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\busqueda_docente.html",
-      "PackagePath": "staticwebassets\\views\\busqueda_docente.html"
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Binaes.html",
+      "PackagePath": "staticwebassets\\views\\Binaes.html"
     },
     {
-      "Id": "C:\\Users\\Luis Hernandez\\Desktop\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\index.html",
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Carga.html",
+      "PackagePath": "staticwebassets\\views\\Carga.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\CatedralSantaAna.html",
+      "PackagePath": "staticwebassets\\views\\CatedralSantaAna.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\CentroHistoricoSS.html",
+      "PackagePath": "staticwebassets\\views\\CentroHistoricoSS.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\CerroLasPavas.html",
+      "PackagePath": "staticwebassets\\views\\CerroLasPavas.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Hmaternidad.html",
+      "PackagePath": "staticwebassets\\views\\Hmaternidad.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Hrosales.html",
+      "PackagePath": "staticwebassets\\views\\Hrosales.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\HsjdDios.html",
+      "PackagePath": "staticwebassets\\views\\HsjdDios.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Hzacamil.html",
+      "PackagePath": "staticwebassets\\views\\Hzacamil.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\IglesiaCiudadBarrios.html",
+      "PackagePath": "staticwebassets\\views\\IglesiaCiudadBarrios.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\ParqueDeAlegria.html",
+      "PackagePath": "staticwebassets\\views\\ParqueDeAlegria.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\PlayaEspino.html",
+      "PackagePath": "staticwebassets\\views\\PlayaEspino.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\PuertaDelDiablo.html",
+      "PackagePath": "staticwebassets\\views\\PuertaDelDiablo.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SanJorge.html",
+      "PackagePath": "staticwebassets\\views\\SanJorge.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SanMiguel.html",
+      "PackagePath": "staticwebassets\\views\\SanMiguel.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SanSalvador.html",
+      "PackagePath": "staticwebassets\\views\\SanSalvador.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SanVicente.html",
+      "PackagePath": "staticwebassets\\views\\SanVicente.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SantiagoDeMaria.html",
+      "PackagePath": "staticwebassets\\views\\SantiagoDeMaria.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\SantuarioCandelaria.html",
+      "PackagePath": "staticwebassets\\views\\SantuarioCandelaria.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\Zacatecoluca.html",
+      "PackagePath": "staticwebassets\\views\\Zacatecoluca.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\destinos.html",
+      "PackagePath": "staticwebassets\\views\\destinos.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\hospitalBloom.html",
+      "PackagePath": "staticwebassets\\views\\hospitalBloom.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\index.html",
       "PackagePath": "staticwebassets\\views\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\inicio.html",
+      "PackagePath": "staticwebassets\\views\\inicio.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\login.html",
+      "PackagePath": "staticwebassets\\views\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\campo\\Desktop\\PrograI-2024-Semi\\PrograI-2024-Semi\\sistema_academico\\sistema_academico\\wwwroot\\views\\registro.html",
+      "PackagePath": "staticwebassets\\views\\registro.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.sistema_academico.props",
